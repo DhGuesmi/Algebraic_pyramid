@@ -85,6 +85,8 @@ if any("" in sub_list for sub_list in L):
     print("Not enough values to solve the pyramid!")
 elif check_coherance(L) == False:
     print("The values are incoherants")
+elif any((x < 0 for x in sub_list) for sub_list in L):
+    print("This pyramid doesn't have a solution with positive numbers")
 else:
     print("Solution:")
     print_pyramid(L)
