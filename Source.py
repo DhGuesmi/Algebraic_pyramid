@@ -1,3 +1,5 @@
+import os
+
 #Function to print the pyramid
 def print_pyramid(L):
     
@@ -56,6 +58,7 @@ for i in range(5):
             L[i][j] = "X"
             print_pyramid(L)
             number = input("Enter a number or press enter to skip: ")
+            os.system('cls')
             if number == "":
                 L[i][j] = number
                 break
@@ -66,7 +69,7 @@ for i in range(5):
                     continue
                 break
             except ValueError:
-                print("That's not an int!")     
+                print("That's not an int!")
 # else all is good, val is >=  0 and an integer
         
 #Printing the filled pyramid
@@ -90,3 +93,6 @@ elif any((x < 0 for x in sub_list) for sub_list in L):
 else:
     print("Solution:")
     print_pyramid(L)
+
+#Press enter to continue
+input("Press enter to continue...")
