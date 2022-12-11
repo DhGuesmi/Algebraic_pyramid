@@ -83,7 +83,8 @@ while any("" in sub_list for sub_list in L):
             solve_pyramid(L,i,j)
     if M == L:
         break
-        
+
+#Checking if the solution is coherant and have no negative values       
 if any("" in sub_list for sub_list in L):
     print("Not enough values to solve the pyramid!")
 elif check_coherance(L) == False:
